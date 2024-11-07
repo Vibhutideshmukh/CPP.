@@ -1,29 +1,24 @@
-1. Display the sum of first n natural numbers using default constructor.
+1.Create an inline function in student class to display the sum of two numbers.
 
-     #include <iostream>
+#include <iostream>
 using namespace std;
 
-class A{
-    public:
-        int n;
-        int s;
-        int i;  
-    
-    A()
-    {
-        n=5;
-        s=0;
-        i=1;
-        
-        for(i=1;i<=n;i++)
-        {
-            s=s+i;
-        }
-        cout<<"sum of"<<n<<"natural numbers:"<<s;
+class Student {
+public:
+
+    void displaySum(int a, int b) {
+        cout << "The sum of " << a << " and " << b << " is: " << (a + b) << endl;
     }
 };
-    int main()
-    {
-        A ob;
-        return 0;
-    }
+
+int main() {
+    Student student;
+    int num1, num2;
+    
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    student.displaySum(num1, num2);
+
+    return 0;
+}
